@@ -9,7 +9,7 @@
 <body>
     <?php 
     include('conexao.php');
-    $sql = "select * FROM fluxo_caixa";
+    $sql = "select * FROM animal";
     $result = mysqli_query($con,$sql);
     $row = mysqli_fetch_array($result);
     ?>
@@ -21,9 +21,9 @@
             <th>Nome</th>
             <th>Raca</th>
             <th>Especie</th>
-            <th>Nome Dono</th>
-            <th>Fone Dono</th>
             <th>Mail Dono</th>
+            <th>Nome Dono</th>
+            <th>fone Dono</th>
             
             <?php
             do{
@@ -32,20 +32,18 @@
             echo "<td>".$row['nome']."</td>";
             echo "<td>".$row['raca']."</td>";
             echo "<td>".$row['especie']."</td>";
-            echo "<td>".$row['nome_dono']."</td>";
-            echo "<td>".$row['fone_dono']."</td>";
+  
+           
             echo "<td>".$row['mail_dono']."</td>";
             echo "<td>
 
+            <a href='altera_animal.php?id=".$row['id']."'>".$row['nome_dono']."</a></td>";
+            echo "<td>".$row['fone_dono']."</td>";
 
-
-            <a href='altera_animal.php?id=".$row['id']."'>".$row['historico']."</a></td>";
-            echo "<td>".$row['cheque']."</td>";
-
-            echo "<td><a href='excluir_animal.php?id=".$row['id']."'>Excluir</a>
+            echo "<td><a href='excluir.php?id=".$row['id']."'>Excluir</a>
             </td>";
 
-            echo "<td> <a href='altera_animal.php?id=".$row['id']."'>Alterar</a>
+            echo "<td> <a href='altera.php?id=".$row['id']."'>Alterar</a>
             </td>";
 
             

@@ -4,7 +4,7 @@ use petshop;
 
 create table animal
 (
-    id        int          not null auto_increment primary key,
+    id        integer not null auto_increment,
     nome      varchar(100) not null,
     raca      varchar(050) null,
     especie   varchar(050) not null, 

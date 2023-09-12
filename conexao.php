@@ -2,8 +2,8 @@
 $hostname = "localhost";
 $username = "root";
 $password = "";
-$database = "animal";
-$port = 3306;
+$database = "petshop";
+$port = 3307;
 $con = mysqli_connect($hostname, $username, $password, $database, $port);
 
 

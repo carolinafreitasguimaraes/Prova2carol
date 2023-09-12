@@ -17,9 +17,8 @@
     <ul class="menu">
         <li><a href="cadastro.html">Cadastrar</a></li>
         <li><a href="listar.php">Listar</a></li>
-        <li><a href="conexao.php">Conexao</a></li>
-        <li><a href="altera.php">Alterar</a></li>
-        <li><a href="excluir.php">Excluir</a></li>
+       
+        
     </ul>
 </body>
 </html>

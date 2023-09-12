@@ -19,44 +19,44 @@ $row = mysqli_fetch_array($result);
     <div class="container">
         <div class="box">
             <h1 class="titulo">
-                Cadastro Fluxo
+                Alteração
             </h1>
+            <?php 
+            echo $row['nome']; 
+            ?>
             <form action="altera_exe.php" method="post">
                 <input name="id" type="hidden" value="<?php echo $row['id'] ?>">
                 <div class="form-group">
                     <label for="nome">Nome: </label>
-                    <input type="varchar" name="nome" id="nome" class="form-control" value="<?php echo $row['nome'] ?>">
+                    <input type="text" name="nome" id="nome" value="<?php echo $row['nome']; ?>"> 
                 </div>
 
                 <div>
                     <label for="raca">Raca: </label>
-                    <input type="varchhar" name="raca" value="entrada" required <?php if($row['raca'] == 'entrada'){ echo "checked"; } else { echo "";} ?>>
-                    <label for="raca">Entrada</label>
-                    <input type="varchar" name="raca" value="saida" required <?php if($row['raca'] == 'saida'){ echo "checked"; } else { echo "";} ?>>
-                    <label for="raca">Saída</label>
+                    <input type="text" name="raca" id="raca" value="<?php echo $row['raca'] ?>"> 
+                   
+                   
                 </div>
 
 
                 <div class="form-group">
                     <label for="especie">Espécie: </label>
-                    <input type="varchar" value="<?php echo $row['especie'] ?>" name="especie" id="especie" required maxlength="13" class="form-control" step=".01">
+                    <input type="text" name="especie" id="especie" value="<?php echo $row['especie'] ?>"> 
                 </div>
                 <div class="form-group">
                     <label for="nome_dono">Nome Dono: </label>
-                    <input type="text" name="nome_dono" value="<?php echo $row['nome_dono'] ?>" id="nome_dono" required maxlength="150" class="form-control">
+                    <input type="text" name="nome_dono" id="nome_dono" value="<?php echo $row['nome_dono'] ?>"> 
                 </div>
                 <div class="form-group">
                     <label for="fone_dono">Fone Dono: </label>
-                    <select class="form-control" name="fone_dono">
-                        <option value="sim" <?php if($row['fone_dono'] == 'sim'){ echo "selected"; } else { echo "";} ?>>Sim</option>
-                        <option value="nao" <?php if($row['fone_dono'] == 'nao'){ echo "selected"; } else { echo "";} ?>>Não</option>
+                    <input type="text" name="fone_dono" id="fone_dono" value="<?php echo $row['fone_dono'] ?>"> 
+                        
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="mail_dono">Mail Dono: </label>
-                    <select class="form-control" name="mail_dono">
-                        <option value="sim" <?php if($row['mail_dono'] == 'sim'){ echo "selected"; } else { echo "";} ?>>Sim</option>
-                        <option value="nao" <?php if($row['mail_dono'] == 'nao'){ echo "selected"; } else { echo "";} ?>>Não</option>
+                    <input type="text"name="mail_dono" id="mail_dono" value="<?php echo $row['mail_dono'] ?>"> 
+                        
                     </select>
                 </div>
                 <input type="submit" value="Enviar" class="buttom">

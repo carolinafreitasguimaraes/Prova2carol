@@ -1,6 +1,5 @@
 <?php 
 include("conexao.php");
-
 $nome = $_POST['nome'];
 $raca = $_POST['raca'];
 $especie = $_POST['especie'];
@@ -17,7 +16,7 @@ echo "Nome Dono: $nome_dono <br>";
 echo "Fone Dono: $fone_dono <br>";
 echo "Mail Dono: $mail_dono <br>";
 
-$sql = "INSERT INTO  (nome,raca,tipo,especie,nome_dono,fone_dono,mail_dono)";
+$sql = "INSERT INTO animal (nome,raca,especie,nome_dono,fone_dono,mail_dono)";
 $sql .= "VALUES ('".$nome."','".$raca."','".$especie."','".$nome_dono."','".$fone_dono."','".$mail_dono."')";
 
 echo $sql;
