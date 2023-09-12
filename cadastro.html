@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <!-- <link rel="stylesheet" type="text/css" href="../css/estiloCadastro/estilo.css" media="screen" /> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container">
+        
+        <div class="box">
+            <h1 class="titulo">
+                  Cadastro da Prova 2
+            </h1>
+    <form action="cadastro.php" method="post">
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="varchar" name="nome" id="nome">
+        </div>
+        <div class="form-group">
+            <label for="raca">Raca:</label>
+            <input type="varchar" name="raca" />
+        </div>
+        <div>
+            <label for="especie">Especie:</label>
+            <input type="varchar" name="especie" id="especie">
+        </div>
+        <div>
+            <label for="nome_dono">Nome dono:</label>
+            <input type="text" name="nome_dono" id="nome_dono">
+        </div>
+        <div>
+            <label for="fone_dono">Fone Dono:</label>
+            <input name="fone_dono"></select>    
+        </div>
+        <div>
+            <label for="mail_dono">mail Dono:</label>
+            <input name="mail_dono"></select>    
+        </div>
+        <input type="submit" value="Salvar">
+    </form>
+    
+</html>
